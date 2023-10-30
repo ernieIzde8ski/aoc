@@ -10,3 +10,21 @@ macro_rules! read_input {
         std::fs::read_to_string($s).expect($m)
     }
 }
+
+#[macro_export]
+macro_rules! benchmark {
+    ($code:expr) => {
+        $crate::benchmark!(1000, $code);
+    };
+
+    ($loops:literal, $code:expr ) => {
+        let before = std::time::Instant::now();
+        for _ in 0..($loops) {
+            $code;
+        }
+        let elapsed = before.elapsed();
+        println!("Iterations:   {}", $loops);
+        println!("Time elapsed: {:.3?}", elapsed);
+        println!("Average time: {:.3?}", elapsed / $loops);
+    };
+}
