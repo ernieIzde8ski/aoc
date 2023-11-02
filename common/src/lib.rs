@@ -14,10 +14,10 @@ macro_rules! read_input {
 #[macro_export]
 macro_rules! benchmark {
     ($code:expr) => {
-        $crate::benchmark!(1000, $code);
+        $crate::benchmark!(10_000, $code);
     };
 
-    ($loops:literal, $code:expr ) => {
+    ($loops:literal, $code:expr ) => {{
         let before = std::time::Instant::now();
         for _ in 0..($loops) {
             $code;
@@ -26,5 +26,5 @@ macro_rules! benchmark {
         println!("Iterations:   {}", $loops);
         println!("Time elapsed: {:.3?}", elapsed);
         println!("Average time: {:.3?}", elapsed / $loops);
-    };
+    }};
 }
