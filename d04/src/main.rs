@@ -1,6 +1,5 @@
 use std::ops::RangeInclusive;
 
-use common::benchmark;
 #[derive(Debug)]
 struct CampPair {
     left: RangeInclusive<u32>,
