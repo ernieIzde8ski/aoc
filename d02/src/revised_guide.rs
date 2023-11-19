@@ -1,16 +1,16 @@
 use std::fmt::Debug;
 
-use super::{Matchup, MatchupResult, RPS};
+use super::{Matchup, MatchupResult, Rps};
 
 #[derive(Debug)]
 struct UncalculatedMatchup {
-    opponent_move: RPS,
+    opponent_move: Rps,
     expected_condition: MatchupResult,
 }
 
 /// A matchup containing your opponents move and what you are being told to play.
 impl UncalculatedMatchup {
-    pub fn new(opponent_move: RPS, expected_condition: MatchupResult) -> Self {
+    pub fn new(opponent_move: Rps, expected_condition: MatchupResult) -> Self {
         Self {
             opponent_move,
             expected_condition,
@@ -43,7 +43,7 @@ impl From<&str> for RevisedStrategyGuide {
 
         while let Some(ch) = input.next() {
             use MatchupResult::*;
-            use RPS::*;
+            use Rps::*;
             let opponent = match ch {
                 'A' => Rock,
                 'B' => Paper,

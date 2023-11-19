@@ -6,7 +6,7 @@ use initial_guide::{InitialStrategyGuide, Matchup};
 use revised_guide::RevisedStrategyGuide;
 
 #[derive(Debug, Clone, Copy)]
-enum RPS {
+enum Rps {
     Rock,
     Paper,
     Scissors,
@@ -29,12 +29,12 @@ impl MatchupResult {
     }
 }
 
-impl RPS {
+impl Rps {
     fn value(&self) -> u32 {
         match self {
-            RPS::Rock => 1,
-            RPS::Paper => 2,
-            RPS::Scissors => 3,
+            Rps::Rock => 1,
+            Rps::Paper => 2,
+            Rps::Scissors => 3,
         }
     }
 
@@ -57,7 +57,7 @@ impl RPS {
     }
 
     /// Checks who would win between these players
-    fn versus(&self, opponent: &RPS) -> MatchupResult {
+    fn versus(&self, opponent: &Rps) -> MatchupResult {
         if discriminant(self) == discriminant(&opponent.winner()) {
             MatchupResult::Win
         } else if discriminant(&self.winner()) == discriminant(opponent) {

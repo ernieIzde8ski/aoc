@@ -19,7 +19,7 @@ trait Rucksack: Sized {
     fn sum(input: &[Self]) -> u32 {
         // no noticeable difference was noted from expanding this out
         // nor from turning the return type of duped_values into u8
-        input.into_iter().map(|sack| sack.duped_values()).sum()
+        input.iter().map(|sack| sack.duped_values()).sum()
     }
 
     fn duped_values(&self) -> u32;

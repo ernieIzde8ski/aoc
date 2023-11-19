@@ -23,7 +23,7 @@ impl Input {
         let stacks = {
             // TODO: take_while
             let mut crate_lines = Vec::new();
-            while let Some(line) = lines.next() {
+            for line in lines.by_ref() {
                 if line.is_empty() {
                     break;
                 }

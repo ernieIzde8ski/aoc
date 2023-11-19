@@ -13,7 +13,7 @@ impl Rucksack for PairedRucksack {
         let right = &self.0[half..];
 
         for value in left {
-            if right.contains(&value) {
+            if right.contains(value) {
                 return *value as u32;
             }
         }

@@ -1,15 +1,15 @@
-use super::RPS;
+use super::Rps;
 
 #[derive(Debug)]
 pub(crate) struct Matchup {
     /// The move your opponent is expected to play.
-    opponent: RPS,
+    opponent: Rps,
     /// The move suggested by the strategy guide.
-    response: RPS,
+    response: Rps,
 }
 
 impl Matchup {
-    pub fn new(opponent: RPS, response: RPS) -> Self {
+    pub fn new(opponent: Rps, response: Rps) -> Self {
         Self { opponent, response }
     }
 
@@ -31,7 +31,7 @@ impl From<&str> for InitialStrategyGuide {
         let mut input = input.chars();
 
         while let Some(ch) = input.next() {
-            use RPS::*;
+            use Rps::*;
             let opponent = match ch {
                 'A' => Rock,
                 'B' => Paper,
