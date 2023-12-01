@@ -1,3 +1,3 @@
-# Advent of Code 2022
+# aoc/2022
 
-AOC 2022 answers in Rust.
+Solutions for 2022 in Rust.
