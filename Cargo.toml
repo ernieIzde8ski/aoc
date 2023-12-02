@@ -1,0 +1,3 @@
+[workspace]
+members = ["common", "d01"]
+resolver = "2"
