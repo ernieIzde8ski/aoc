@@ -49,3 +49,10 @@ dependencies = [
  "anyhow",
  "common",
 ]
+
+[[package]]
+name = "d06"
+version = "0.1.0"
+dependencies = [
+ "common",
+]
