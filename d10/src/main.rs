@@ -45,7 +45,7 @@ fn main() -> Result<()> {
             case!(0, 1, '7' | '-' | 'J')
         }
 
-        panic!("shouldn't happen")
+        panic!("oopsie doopsie your input is fucky wucky")
     };
 
     let mut path: Vec<Coord> = Vec::new();
