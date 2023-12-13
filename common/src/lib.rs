@@ -1,3 +1,5 @@
+use std::rc::Rc;
+
 #[macro_export]
 macro_rules! read_input {
     () => {
@@ -32,3 +34,7 @@ macro_rules! benchmark {
         eprintln!("Average time: {:.3?}", elapsed / $loops);
     }};
 }
+
+/// An immutable "list". Ref-counter slices are nice for making sure that
+/// I don't accidentally mutate input after parsing.
+pub type List<T> = Rc<[T]>;
