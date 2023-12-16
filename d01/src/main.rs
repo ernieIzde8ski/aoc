@@ -53,7 +53,10 @@ fn part_2(line: &str) -> (Option<u32>, Option<u32>) {
 }
 
 /// Takes a function that returns the first and last node,
-fn apply_input_parser(input: &str, parser: impl Fn(&str) -> (Option<u32>, Option<u32>)) -> u32 {
+fn apply_input_parser(
+    input: &str,
+    parser: impl Fn(&str) -> (Option<u32>, Option<u32>),
+) -> u32 {
     let mut resp = 0;
     for line in input.lines() {
         let (first, last) = parser(line);

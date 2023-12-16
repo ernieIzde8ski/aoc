@@ -1,4 +1,3 @@
-
 use common::read_input;
 use itertools::Itertools;
 

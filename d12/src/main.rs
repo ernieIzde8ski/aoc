@@ -105,7 +105,7 @@ fn sum_possible_arrangements(rows: &[(Vec<Spring>, Vec<u32>)]) -> u32 {
 /// Too lazy to figure out part 2, sorry. Looks neat though. Always
 /// wondered how a computer would play Nonograms. The game is easily
 /// played manually at any rate.
-/// 
+///
 /// Sample output: 21
 fn main() {
     let input = read_input!();
