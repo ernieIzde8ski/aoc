@@ -1,0 +1,5 @@
+#!/bin/sh
+
+set -eu
+lake build
+./.lake/build/bin/advent-of-code "$@"

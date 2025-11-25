@@ -1,0 +1,15 @@
+name = "advent-of-code"
+version = "0.1.0"
+defaultTargets = ["advent-of-code"]
+
+[[lean_lib]]
+name = "AdventOfCode"
+
+[[lean_exe]]
+name = "advent-of-code"
+root = "Main"
+
+[[require]]
+name = "lean4-cli"
+scope = "leanprover"
+rev  = "v4.25.1"
